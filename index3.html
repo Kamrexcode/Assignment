@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        font-size: 20px;
+        font-family: "Arial Narrow";
+    }
+    button{
+        padding: 3px 20px;
+        font-size: 15px;
+    }
+</style>
+<body>
+    <div id="text">Javascript assignment</div>
+    <button id="click">Click me</button>
+
+    <script>
+        const btn = document.querySelector("#text");
+        const click = document.querySelector("#click")
+
+
+        click.addEventListener("click",function (e){
+           btn.innerHTML = "I did the assignment";
+        })
+       
+    </script>
+</body>
+</html>

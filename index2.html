@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .screen{
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+    }
+</style>
+<body>
+    
+    <button id="btn">CLick Me</button>
+    <input id="textinput" type="search">
+    <input type="date">
+    <img class="profile" src="" alt="" srcset="">
+
+    <div class="screen"></div>
+        <div class="color_container">
+            <button>green</button>
+            <button>yellow</button>
+            <button>blue</button>
+            <button>orange</button>
+            <button>purple</button>
+        </div>
+
+
+    <script>
+        const button = document.querySelector("#btn")
+        const colorContainer = document.querySelector(".color_container")
+        const s = document.querySelector(".screen")
+        const textInput = document.querySelector(".textinput")
+
+        console.log(document);
+        console.log(btn);
+        console.log(button.textContent);
+        console.log(button.attributes);
+        // g.getAttribute("src","class")
+        // console.log(g.getAttribute("class"));
+
+
+        button.style.backgroundColor = "red"
+
+        console.log(button.style);
+        
+        button.addEventListener("click",function(e){
+            console.log("you clicked me");
+            console.log(e);
+        })
+
+        colorContainer.addEventListener("click",function(e){
+            console.log(e);
+            console.log(e.target);
+            console.log(e.target.textContent);
+
+            s.style.backgroundColor = e.target.textContent;
+        })
+
+        textInput.addEventListener("keyup",function(e){
+            console.log(e);
+            console.log(e.target.value);
+
+            username = e.target.value
+        })
+
+        console.log(window);
+        window.addEventListener("offline",function(e){
+            console.log("Internet Connection Lost");
+        })
+        window.addEventListener("online",function(e){
+            console.log("Internet Connection restored");
+        })
+
+        
+
+    </script>
+    <form action="">
+        <input type="text" name="" id="">
+        <label for="username"></label>
+        <input type="email" name="email" id="">
+        <input type="password" name="" id="">
+        <input type="password" name="" id="">
+    </form>
+
+</body>
+</html>
